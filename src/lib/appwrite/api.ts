@@ -507,36 +507,35 @@ import { account, appwriteConfig, avatars, databases, storage } from './config';
         }
     
         //  Update user
-        const updatedUser = await databases.updateDocument(
-          appwriteConfig.databaseId,
-          appwriteConfig.userCollectionId,
-          user.userId,
-          {
-            name: user.name,
-            bio: user.bio,
-            imageUrl: image.imageUrl,
-            imageId: image.imageId,
-          }
-        );
-    
-        // Failed to update
-        if (!updatedUser) {
-          // Delete new file that has been recently uploaded
-          if (hasFileToUpdate) {
-            await deleteFile(image.imageId);
-          }
-          // If no new file uploaded, just throw error
-          throw Error;
-        }
-    
-        // Safely delete old file after successful update
-        if (user.imageId && hasFileToUpdate) {
-          await deleteFile(user.imageId);
-        }
-    
-        return updatedUser;
-      } catch (error) {
-        console.log(error);
+    const updatedUser = await databases.updateDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.userCollectionId,
+      user.userId,
+      {
+        name: user.name,
+        bio: user.bio,
+        imageUrl: image.imageUrl,
+        imageId: image.imageId,
       }
+    );
+
+    // Failed to update
+    if (!updatedUser) {
+      // Delete new file that has been recently uploaded
+      if (hasFileToUpdate) {
+        await deleteFile(image.imageId);
+      }
+      // If no new file uploaded, just throw error
+      throw Error;
     }
-    
+
+    // Safely delete old file after successful update
+    if (user.imageId && hasFileToUpdate) {
+      await deleteFile(user.imageId);
+    }
+
+    return updatedUser;
+  } catch (error) {
+    console.log(error);
+  }
+}
