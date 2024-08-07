@@ -2,26 +2,6 @@
     <h3 align="center">A Social Media Application</h3>
 </div>
   
-  ## 📋 <a name="table">Table of Contents</a>
-  
-  1. 🤖 [Introduction](#introduction)
-  2. ⚙️ [Tech Stack](#tech-stack)
-  3. 🔋 [Features](#features)
-  4. 🤸 [Quick Start](#quick-start)
-  
-  ## <a name="introduction">🤖 Introduction</a>
-  
-  Explore social media with this user-friendly platform with a nice look and many features. Easily create and explore posts, and enjoy a strong authentication system and quick data fetching using React Query for a smooth user experience.
-  
-  ## <a name="tech-stack">⚙️ Tech Stack</a>
-  
-  - React.js
-  - Appwrite
-  - React Query
-  - TypeScript
-  - Shadcn
-  - Tailwind CSS
-  
   ## <a name="features">🔋 Features</a>
   
   👉 **Authentication System**: A robust authentication system ensuring security and user privacy
@@ -49,16 +29,6 @@
   and many more, including code architecture and reusability 
   
   ## <a name="quick-start">🤸 Quick Start</a>
-  
-  Follow these steps to set up the project locally on your machine.
-  
-  **Prerequisites**
-  
-  Make sure you have the following installed on your machine:
-  
-  - [Git](https://git-scm.com/)
-  - [Node.js](https://nodejs.org/en)
-  - [npm](https://www.npmjs.com/) (Node Package Manager)
   
   **Cloning the Repository**
   
@@ -89,14 +59,20 @@
   VITE_APPWRITE_SAVES_COLLECTION_ID=
   ```
   
-  Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).
+  Replace the placeholder values with your actual Appwrite credentials.
   
   **Running the Project**
   
   ```bash
   npm start
   ```
+
+    ## <a name="tech-stack">⚙️ Tech Stack</a>
   
-  Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
-  
+  - React.js
+  - Appwrite
+  - React Query
+  - TypeScript
+  - Shadcn
+  - Tailwind CSS
   
