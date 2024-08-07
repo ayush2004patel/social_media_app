@@ -67,7 +67,7 @@
   npm start
   ```
 
-    ## <a name="tech-stack">⚙️ Tech Stack</a>
+## <a name="tech-stack">⚙️ Tech Stack</a>
   
   - React.js
   - Appwrite
